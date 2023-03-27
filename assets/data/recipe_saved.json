@@ -1,0 +1,20 @@
+{
+    "recipes":
+              [
+                {
+                    "name": "Steak and Veggies",
+                    "favourite": true,
+                    "category": "Meat"
+                },
+                {
+                    "name": "Butter Chicken",
+                    "favourite": true,
+                    "category": "Rice"
+                },
+                {
+                    "name": "Nachos",
+                    "favourite": true,
+                    "category": "Chips"
+                }
+              ]
+}
