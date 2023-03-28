@@ -32,34 +32,32 @@ main {
 
 /* Top navigation bar */
 .top-nav-bar {
-  padding: 1rem;
-  background: #555;
-  color: #f1f1f1;
   position: fixed;
+  background-color: #555;
   top: 0;
-  height: 2rem;
+  height: 3rem;
   width: calc(100% - 20rem);
   right: 0;
 }
 
 .top-nav-bar-container {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  display: inline-block;
   position: relative;
+  list-style: none;
+  margin: 0;
+  display: flex;
+  gap: 0.5rem;
   top: 50%;
-  left: 50%;
+  left: 80%;
   transform: translate(-50%, -50%);
 }
 
-.top-nav-bar a {
-  color: #000000;
+.top-nav-bar-btn {
+  color: white;
   background-color: #4CAF50;
-  padding: 12px 2rem;
+  padding: 8px 2rem;
   border-radius: 12px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 /* Block for side bar */
