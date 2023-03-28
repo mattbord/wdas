@@ -30,17 +30,39 @@ main {
   padding: 1rem;
 }
 
-/* Style the header */
+/* Top navigation bar */
 .top-nav-bar {
-  padding: 10px;
+  padding: 1rem;
   background: #555;
   color: #f1f1f1;
   position: fixed;
   top: 0;
   height: 2rem;
-  width: 100%
+  width: calc(100% - 20rem);
+  right: 0;
 }
 
+.top-nav-bar-container {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.top-nav-bar a {
+  color: #000000;
+  background-color: #4CAF50;
+  padding: 12px 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+/* Block for side bar */
 .navbar {
   position: fixed;
   background-color: var(--bg-primary);
@@ -51,6 +73,7 @@ main {
   height: 100vh;
 }
 
+/* change style of the scroll bar */
 nav::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -60,9 +83,10 @@ nav::-webkit-scrollbar-track {
 }
 
 nav::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #307e32;
 }
 
+/* Navigation items container */
 .navbar-nav {
   list-style: none;
   padding: 1rem;
@@ -73,12 +97,26 @@ nav::-webkit-scrollbar-thumb {
   height: 100%;
 }
 
+/* Heading at top of side bar */
 .nav-header {
   text-align: center;
   color: var(--text-primary);
   text-decoration: none;
 }
 
+/* Block of selections on side bar */
+.nav-item {
+  text-align: center;
+}
+
+.nav-item h2 {
+  text-align: center;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Grid of buttons */
 .basic-grid {
   display: grid;
   gap: 1rem;
@@ -88,6 +126,7 @@ nav::-webkit-scrollbar-thumb {
   margin-top: 1rem;
 }
 
+/* Individual button */
 .card {
   background-color: #4CAF50; /* Green */
   color: white;
