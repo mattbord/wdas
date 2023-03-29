@@ -1,0 +1,22 @@
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans';
+  --text-primary: #000000;
+  --bg-primary: #C5C6D0;
+}
+
+body {
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
+}
+
+body {
+  background-color: #93CCEA;
+}
+
+h1, h2, h3, h4, h5, p {
+  text-align: center;
+}
