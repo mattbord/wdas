@@ -60,6 +60,10 @@ main {
   cursor: pointer;
 }
 
+.top-nav-bar-btn:hover {
+  background-color: #06652a;
+}
+
 /* Block for side bar */
 .navbar {
   position: fixed;
