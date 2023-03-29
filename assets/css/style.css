@@ -38,6 +38,7 @@ main {
   height: 3rem;
   width: calc(100% - 20rem);
   right: 0;
+  align:left;
 }
 
 .top-nav-bar-container {
@@ -49,6 +50,7 @@ main {
   top: 50%;
   left: 80%;
   transform: translate(-50%, -50%);
+
 }
 
 .top-nav-bar-btn {
