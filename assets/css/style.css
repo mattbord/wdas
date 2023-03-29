@@ -36,7 +36,7 @@ main {
   background-color: #555;
   top: 0;
   height: 3rem;
-  width: calc(100% - 20rem);
+  width: 100%;
   right: 0;
 }
 
@@ -47,7 +47,8 @@ main {
   display: flex;
   gap: 0.5rem;
   top: 50%;
-  left: 80%;
+  width: 100%;
+  left: calc(100% - 20rem);
   transform: translate(-50%, -50%);
 }
 
