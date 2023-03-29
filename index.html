@@ -5,16 +5,22 @@
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
     rel="stylesheet"
   />
+  <script src="index.js"></script>
+  
 </head>
 
 <body>
+
+	
+   
   
 	<nav class="top-nav-bar">
     <ul class="top-nav-bar-container">
       <li class="top-nav-bar-btn" href="#home">Home</li>
       <li class="top-nav-bar-btn" href="#about">About Us</li>
-      <li class="top-nav-bar-btn" href="#saved">Saved Recipes</le>
-      
+      <li button class="top-nav-bar-btn" onclick="location.href = './saved-recipes.html';">Saved Recipes</button>
+	</le>
+		
     </ul>
     
 	</nav>
@@ -31,7 +37,7 @@
 			<li class="nav-item">
         <h2>Meat</h2>
 				<section class="basic-grid">
-					<div class="card">Beef</div>
+					<div class="card" onclick="duplicate()">Beef</div>
 					<div class="card">Chicken</div>
 					<div class="card">Lamb</div>
 					<div class="card">Fish</div>
@@ -89,6 +95,13 @@
 		</ul>
 	</nav>
 
+	<main> 
+		
+		<p id="doThis"></p>
+    
+	
+    </main>
 
+	
 
 </body>

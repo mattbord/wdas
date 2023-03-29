@@ -136,3 +136,14 @@ nav::-webkit-scrollbar-thumb {
   cursor: pointer;
   border-radius: 12px;
 }
+
+.card:hover {
+  background-color: #06652a;
+}
+
+.doThis {
+  color:#6649b8;
+  font-size: 300px;
+  margin: 20px;
+  text-align: center;
+}
