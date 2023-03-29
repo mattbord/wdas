@@ -42,21 +42,20 @@ main {
 }
 
 .top-nav-bar-container {
-  position: relative;
+  position: absolute;
   list-style: none;
   margin: 0;
   display: flex;
   gap: 0.5rem;
-  top: 50%;
-  width: 100%;
-  left: calc(100% - 20rem);
-  transform: translate(-50%, -50%);
+  top: 0.3rem;  
+  right: 0.5rem;
+  float: left;
 }
 
 .top-nav-bar-btn {
   color: white;
   background-color: #4CAF50;
-  padding: 8px 2rem;
+  padding: 0.5rem 2rem;
   border-radius: 12px;
   text-decoration: none;
   cursor: pointer;
