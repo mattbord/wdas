@@ -38,6 +38,7 @@ main {
   height: 3rem;
   width: calc(100% - 20rem);
   right: 0;
+  z-index: 999;
 }
 
 .top-nav-bar-container {
@@ -160,13 +161,39 @@ nav::-webkit-scrollbar-thumb {
   border-radius: 12px;
   text-decoration: none;
   cursor: pointer;
-  position: relative;
+  position: absolute;
   /* 20 rem is the width of the side bar */
-  left: calc(50% - 20rem);
-  -ms-transform: translateY(300%);
-  transform: translateY(300%);
+  left: calc(50% - 10rem);
+  margin-top: 43rem;
+  z-index: 1;
 }
 
 .generate-btn:hover {
   background-color: #06652a;
+}
+
+.container {
+  position: absolute;
+  width: 30rem;
+  /* 20 rem is the width of the side bar */
+  left: calc(50% - 10rem);
+  margin-top: 3rem;
+  display: grid;
+  height: max-content;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  z-index: 1;
+}
+
+.options-card {
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: #000000;
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  height: 3rem;
+  line-height: 3rem;
+  background: #4CAF50;
+  border-radius: 28px;
+  text-align: center;
 }
