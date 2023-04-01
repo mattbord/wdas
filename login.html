@@ -5,37 +5,26 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/login.css" />
+        <link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+		rel="stylesheet"
+	    />
     </head>
 
     <div class="container">
-        <!-- code here -->
         <div class="card">
-            <div class="card-image">	
-                <h2 class="card-heading">
-                    Get started
-                    <small>Let us create your account</small>
-                </h2>
-            </div>
+            <img class="card-image" src="assets/images/logo.png"></img>
             <form class="card-form">
                 <div class="input">
-                    <input type="text" class="input-field" required/>
-                    <label class="input-label">Full name</label>
+                    <input type="text" class="input-field" placeholder="Email"required/>
                 </div>
-                            <div class="input">
-                    <input type="text" class="input-field" required/>
-                    <label class="input-label">Email</label>
-                </div>
-                            <div class="input">
-                    <input type="password" class="input-field" required/>
-                    <label class="input-label">Password</label>
+                    <div class="input">
+                    <input type="password" class="input-field" placeholder="Password"required/>
                 </div>
                 <div class="action">
-                    <button class="action-button" onclick="location.href = './index.html';">Get started</button>
+                    <button class="action-button" onclick="location.href = './index.html';">Login</button>
                 </div>
             </form>
-            <div class="card-info">
-                <p>By signing up you are agreeing to our <a href="#">Terms and Conditions</a></p>
-            </div>
         </div>
     </div>
 </html>
