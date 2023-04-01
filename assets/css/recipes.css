@@ -8,6 +8,7 @@
 body {
   overflow-y: hidden;
   text-align: center;
+  background: #ADD8E6;
 }
 
 body::-webkit-scrollbar {
@@ -25,7 +26,7 @@ body::-webkit-scrollbar-thumb {
 /* Top navigation bar */
 .top-nav-bar {
   position: fixed;
-  background-color: #555;
+  background-color: #499bb6;
   top: 0;
   height: 3rem;
   width: 100%;
@@ -52,11 +53,15 @@ body::-webkit-scrollbar-thumb {
   cursor: pointer;
 }
 
+.top-nav-bar-btn:hover {
+  background-color: #06652a;
+}
+
 main {
   overflow: hidden;
   margin-top: 4rem;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
 }
 
 .container {
@@ -64,21 +69,46 @@ main {
   height: 85vh;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 0.5rem;
+  grid-gap: 1rem;
+  grid-row-gap: 2rem;
 }
 
 .card {
-  background: #555;
+  background: #f5f5f5;
+  border-radius: 28px;
+  padding: 1rem;
+  text-align: left;
+  position: relative;
+}
+
+.card h4 {
+  position: absolute;
+  bottom: 0;
+}
+
+.card h2 {
+  text-align: center;
+  width: 100px;
   border-radius: 12px;
+  background: #97d4e9;
 }
 
 .paginator {
   text-align: center;
-  width: 100px;
+  width: 140px;
   position: relative;
   bottom: -1rem;
   /* This is to ensure the text is centered on the screen. (50% - X) where X should be half of the element width */
-  left: calc(50% - 50px);
-  background:#555;
+  left: calc(50% - 70px);
+  background:#4CAF50;
+  opacity: 80%;
+  border-radius: 12px;
+
+}
+
+.paginator a {
+  zoom: 150%;
+  display: inline-block;
+  cursor: pointer;
 }
 

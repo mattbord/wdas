@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+
+<script src="assets/js/dataFetch.js" type="javascript/text"></script>
+<noscript>Sorry your browser does not support JavaScript</noscript>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/css/recipes.css" />
@@ -12,14 +17,26 @@
 		<ul class="top-nav-bar-container">
 			<li button class="top-nav-bar-btn" onclick="location.href = './index.html';">Home</button>
 			<li button class="top-nav-bar-btn" onclick="location.href = './about.html';">About Us</button>
-			<li button class="top-nav-bar-btn" onclick="location.href = './saved-recipes.html';">Saved Recipes</button>	
+			<li button class="top-nav-bar-btn" onclick="location.href = './saved-recipes.html';">Saved Recipes</button>
+      <li button class="top-nav-bar-btn" onclick="location.href = './login.html';">Login</button>	
 		</ul>
 	</nav>
 
 	
 	<main>
 		<div class="container">
-      <div class="card">0</div>
+      <div class="card">
+        <script src="assets/js/dataFetch.js"></script>
+        <script>
+          getRecipeCategory(0)
+          getRecipeName(0)
+          getIsFavourite(0)
+        </script>
+        <h2 id="category"></h2>
+        <h1 id="favourite"></h1>
+        <h4 id="name"></h4>
+      </div>
+
       <div class="card">1</div>
       <div class="card">2</div>
       <div class="card">3</div>
@@ -29,5 +46,10 @@
       <div class="card">7</div>
     </div>
   </main>
-  <div class="paginator">Page 1</div>
+
+  <div class="paginator">
+    <a>←</a>
+    Page 1
+    <a>→</a>
+  </div>
 </body>
