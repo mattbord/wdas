@@ -4,7 +4,7 @@ function getRecipeCategory(number) {
         fetch("assets/data/recipe_options.json")
         .then(response => response.json())
         .then(data => {
-            document.getElementById("category").innerHTML=data[number].category
+            document.getElementById("category"+number).innerHTML=data[number].category
         })
     } catch(Error) {
         console.log(Error)
@@ -16,7 +16,7 @@ function getRecipeName(number) {
         fetch("assets/data/recipe_options.json")
         .then(response => response.json())
         .then(data => {
-            document.getElementById("name").innerHTML=data[number].name
+            document.getElementById("name"+number).innerHTML=data[number].name
         })
     } catch(Error) {
         console.log(Error)
@@ -28,9 +28,28 @@ function getIsFavourite(number) {
         fetch("assets/data/recipe_options.json")
         .then(response => response.json())
         .then(data => {
-            document.getElementById("favourite").innerHTML=data[number].favourite
+            if (data[number].favourite==true){
+                document.getElementById("star"+number).className = "favourite";
+            }
         })
     } catch(Error) {
         console.log(Error)
     }
+}
+
+function changeIsFavourite(number) {
+    if ( document.getElementById("star"+number).className.match(/(?:^|\s)favourite(?!\S)/) ){
+        try {
+            document.getElementById("star"+number).className = "favourite-grey";
+        } catch(Error) {
+            console.log(Error)
+        }
+    } else {
+        try {
+            document.getElementById("star"+number).className = "favourite";
+        } catch(Error) {
+            console.log(Error)
+        }
+    }
+
 }

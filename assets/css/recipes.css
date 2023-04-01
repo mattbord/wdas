@@ -81,16 +81,48 @@ main {
   position: relative;
 }
 
+.card h2 {
+  text-align: center;
+  width: max-content;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 12px;
+  background: #97d4e9;
+}
+
 .card h4 {
+  text-align: center;
+  margin-left: 1rem;
   position: absolute;
   bottom: 0;
 }
 
-.card h2 {
-  text-align: center;
-  width: 100px;
-  border-radius: 12px;
-  background: #97d4e9;
+.favourite {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 50px;
+  cursor: pointer;
+}
+
+.favourite-grey {
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+  width: 50px;
+  cursor: pointer;
+  filter: gray; /* IE6-9 */
+  -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+  filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+}
+
+.food {
+  position: absolute;
+  border-radius: 24px;
+  bottom: 3rem;
+  right: 6rem;
+  width: 225px;
+  cursor: pointer;
 }
 
 .paginator {
