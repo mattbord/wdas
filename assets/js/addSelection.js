@@ -18,3 +18,7 @@ function addSelection(item){
         container.appendChild(card);
     }
 }
+
+function clearSelections(){
+    document.querySelectorAll('.options-card').forEach(e => e.remove());
+}

@@ -29,7 +29,7 @@
 			</li>
 
 			<li class="nav-item">
-        <h2>Meat</h2>
+        		<h2>Meat</h2>
 				<section class="basic-grid">
 					<div class="card" onclick="addSelection('Beef')">Beef</div>
 					<div class="card" onclick="addSelection('Chicken')">Chicken</div>
@@ -44,45 +44,50 @@
 			</li>
 
 			<li class="nav-item">
-        <h2>Dairy</h2>
+        		<h2>Dairy</h2>
 				<section class="basic-grid">
-					<div class="card">Milk</div>
-					<div class="card">Cheese</div>
-					<div class="card">Cream</div>
-					<div class="card">Yoghurt</div>
-					<div class="card">Sour Crean</div>
-					<div class="card">Butter</div>
-					<div class="card">7</div>
-					<div class="card">8</div>
-					<div class="card">9</div>
+					<div class="card" onclick="addSelection('Milk')">Milk</div>
+					<div class="card" onclick="addSelection('Cheese')">Cheese</div>
+					<div class="card" onclick="addSelection('Cream')">Cream</div>
+					<div class="card" onclick="addSelection('Yoghurt')">Yoghurt</div>
+					<div class="card" onclick="addSelection('Sour Cream')">Sour Cream</div>
+					<div class="card" onclick="addSelection('Butter')">Butter</div>
 				</section>
 			</li>
 
 			<li class="nav-item">
+				<h2>Vegetables</h2>
 				<section class="basic-grid">
-					<div class="card">1</div>
-					<div class="card">2</div>
-					<div class="card">3</div>
-					<div class="card">4</div>
-					<div class="card">5</div>
-					<div class="card">6</div>
-					<div class="card">7</div>
-					<div class="card">8</div>
-					<div class="card">9</div>
+					<div class="card" onclick="addSelection('Onion')">Onion</div>
+					<div class="card" onclick="addSelection('Capsicum')">Capsicum</div>
+					<div class="card" onclick="addSelection('Potato')">Potato</div>
+					<div class="card" onclick="addSelection('Tomato')">Tomato</div>
+					<div class="card" onclick="addSelection('Carrot')">Carrot</div>
+					<div class="card" onclick="addSelection('Celery')">Celery</div>
+					<div class="card" onclick="addSelection('Broccoli')">Broccoli</div>
+					<div class="card" onclick="addSelection('Pumpkin')">Pumpkin</div>
+					<div class="card" onclick="addSelection('Lettuce')">Lettuce</div>
+					<div class="card" onclick="addSelection('Cabbage')">Cabbage</div>
+					<div class="card" onclick="addSelection('Corn')">Corn</div>
+					<div class="card" onclick="addSelection('Bean Sprouts')">Been Sprouts</div>
+					<div class="card" onclick="addSelection('Bok Choy')">Bok Choy</div>
 				</section>
 			</li>
 
 			<li class="nav-item">
+				<h2>Staples</h2>
 				<section class="basic-grid">
-					<div class="card">1</div>
-					<div class="card">2</div>
-					<div class="card">3</div>
-					<div class="card">4</div>
-					<div class="card">5</div>
-					<div class="card">6</div>
-					<div class="card">7</div>
-					<div class="card">8</div>
-					<div class="card">9</div>
+					<div class="card" onclick="addSelection('Flour')">Flour</div>
+					<div class="card" onclick="addSelection('Corn Flour')">Corn Flour</div>
+					<div class="card" onclick="addSelection('Sugar')">Sugar</div>
+					<div class="card" onclick="addSelection('Egg')">Egg</div>
+					<div class="card" onclick="addSelection('Rice')">Rice</div>
+					<div class="card" onclick="addSelection('Bread')">Bread</div>
+					<div class="card" onclick="addSelection('Vegetable Oil')">Vegetable Oil</div>
+					<div class="card" onclick="addSelection('Olive Oil')">Olive Oil</div>
+					<div class="card" onclick="addSelection('Basil')">Basil</div>
+					<div class="card" onclick="addSelection('Oregano')">Oregano</div>
+					<div class="card" onclick="addSelection('Pasta')">Pasta</div>
 				</section>
 			</li>
 
@@ -93,7 +98,7 @@
 		<div class="container" id="selection-container"></div>
 
 		<button class="generate-btn" onclick="location.href = './recipes.html';">Generate Recipes</button>
-    
+		<button id="reset" onclick="clearSelections()">Clear Selections</button>
 	
     </main>
  

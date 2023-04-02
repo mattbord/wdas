@@ -62,7 +62,7 @@ main {
 }
 
 .top-nav-bar-btn:hover {
-  background-color: #1809eb;
+  background-color: #05627e;
 }
 
 /* Block for side bar */
@@ -86,7 +86,7 @@ nav::-webkit-scrollbar-track {
 }
 
 nav::-webkit-scrollbar-thumb {
-  background: #307e32;
+  background: #05627e;
 }
 
 /* Navigation items container */
@@ -127,11 +127,12 @@ nav::-webkit-scrollbar-thumb {
   width: 20rem;
   margin-left: 3rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;;
 }
 
 /* Individual button */
 .card {
-  background-color: #4CAF50; /* Green */
+  background-color: #499bb6;
   color: white;
   padding: 10px 32px;
   text-align: center;
@@ -141,7 +142,7 @@ nav::-webkit-scrollbar-thumb {
 }
 
 .card:hover {
-  background-color: #06652a;
+  background-color: #2850be;
 }
 
 .doThis {
@@ -156,7 +157,7 @@ nav::-webkit-scrollbar-thumb {
   height: 10rem;
   font-size: 32px;
   color: white;
-  background-color: #4CAF50;
+  background-color: #499bb6;
   padding: 0.5rem 2rem;
   border-radius: 12px;
   text-decoration: none;
@@ -169,7 +170,7 @@ nav::-webkit-scrollbar-thumb {
 }
 
 .generate-btn:hover {
-  background-color: #06652a;
+  background-color: #2850be;
 }
 
 .container {
@@ -193,7 +194,26 @@ nav::-webkit-scrollbar-thumb {
   font-weight: bold;
   height: 3rem;
   line-height: 3rem;
-  background: #4CAF50;
+  background: #496cb6;
   border-radius: 28px;
   text-align: center;
+}
+
+#reset {
+  width: 10rem;
+  height: 5rem;
+  position: absolute;
+  left: calc(70%);
+  margin-top: 46rem;
+  z-index: 1;
+  color: white;
+  background-color: #499bb6;
+  padding: 0.5rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#reset:hover {
+  background-color: #2850be;
 }
