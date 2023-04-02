@@ -61,3 +61,12 @@ h1, h2, h3, h4, h5, p {
 .top-nav-bar-btn:hover {
   background-color: #1809eb;
 }
+
+.logo {
+  width: 85px;
+  height: auto;
+  float: left;
+  background-color: #070255;
+  border-radius: 12px;
+  
+}

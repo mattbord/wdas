@@ -56,6 +56,13 @@ body::-webkit-scrollbar-thumb {
 .top-nav-bar-btn:hover {
   background-color: #1809eb;
 }
+.logo {
+  width: 85px;
+  height: auto;
+  float: left;
+  background-color: #070255;
+  border-radius: 12px;
+}
 
 main {
   overflow: hidden;

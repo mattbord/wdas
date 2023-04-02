@@ -70,6 +70,7 @@ main {
   height: auto;
   float: left;
   background-color: #070255;
+  border-radius: 12px;
 }
 
 /* Block for side bar */
