@@ -134,10 +134,10 @@ main {
   bottom: -1rem;
   /* This is to ensure the text is centered on the screen. (50% - X) where X should be half of the element width */
   left: calc(50% - 70px);
-  background:#4CAF50;
+  background:#499bb6;
   opacity: 80%;
   border-radius: 12px;
-
+  font-weight: bold;
 }
 
 .paginator a {
