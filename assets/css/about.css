@@ -1,3 +1,4 @@
+/* standards for whole stylesheet. 16px is the basis for our rem units */
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
@@ -6,6 +7,7 @@
   margin-top: 4rem;
 }
 
+/* Body is the entire page */
 body {
   color: black;
   background-color: white;
@@ -16,6 +18,20 @@ body {
 body {
   background-color: #93CCEA;
 }
+
+/* Customise the scroll bar */
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
 
 #review-image {
   display: block;

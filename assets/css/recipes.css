@@ -1,3 +1,4 @@
+/* standards for whole stylesheet. 16px is the basis for our rem units */
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
@@ -5,12 +6,14 @@
   --bg-primary: #C5C6D0;
 }
 
+/* Body is the entire page */
 body {
   overflow-y: hidden;
   text-align: center;
   background: #ADD8E6;
 }
 
+/* Customise the scroll bar */
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -64,6 +67,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 12px;
 }
 
+/* PAge content inside sidebar and navbar */
 main {
   overflow: hidden;
   margin-top: 4rem;
@@ -71,6 +75,7 @@ main {
   margin-left: 3rem;
 }
 
+/* grid to hold the recipe cards */
 .container {
   display: grid;
   height: 85vh;
@@ -80,6 +85,7 @@ main {
   grid-row-gap: 2rem;
 }
 
+/* individual recipes */
 .card {
   background: #f5f5f5;
   border-radius: 28px;
@@ -104,6 +110,7 @@ main {
   bottom: 0;
 }
 
+/* favourite star top right */
 .favourite {
   position: absolute;
   top: 1.5rem;
@@ -134,6 +141,7 @@ main {
   cursor: pointer;
 }
 
+/* paginator at the bottom of the page */
 .paginator {
   text-align: center;
   width: 140px;

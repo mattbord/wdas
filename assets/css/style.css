@@ -1,3 +1,4 @@
+/* standards for whole stylesheet. 16px is the basis for our rem units */
 :root {
   font-size: 16px;
   font-family: 'Open Sans';
@@ -5,6 +6,7 @@
   --bg-primary: #C5C6D0;
 }
 
+/* Body is the entire page */
 body {
   color: black;
   background-color: white;
@@ -12,6 +14,7 @@ body {
   padding: 0;
 }
 
+/* Customise the scroll bar */
 body::-webkit-scrollbar {
   width: 0.25rem;
 }
@@ -24,6 +27,7 @@ body::-webkit-scrollbar-thumb {
   background: #6649b8;
 }
 
+/* Page content inside sidebar and navbar */
 main {
   margin-left: 20rem;
   margin-top: 2rem;
@@ -84,7 +88,7 @@ main {
   height: 100vh;
 }
 
-/* change style of the scroll bar */
+/* change style of the scroll bar for the sidebar*/
 nav::-webkit-scrollbar {
   width: 0.25rem;
 }

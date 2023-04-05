@@ -1,4 +1,7 @@
-
+/**
+ * Display the category of a recipe option
+ * @number is the item to be fetched from the JSON file
+ */
 function getRecipeCategory(number) {
     try {
         fetch("assets/data/recipe_options.json")
@@ -10,7 +13,10 @@ function getRecipeCategory(number) {
         console.log(Error)
     }
 }
-
+/**
+ * Display the name of a recipe option
+ * @number is the item to be fetched from the JSON file
+ */
 function getRecipeName(number) {
     try {
         fetch("assets/data/recipe_options.json")
@@ -23,6 +29,10 @@ function getRecipeName(number) {
     }
 }
 
+/**
+ * Display the status of if a recipe is favourited
+ * @number is the item to be fetched from the JSON file
+ */
 function getIsFavourite(number) {
     try {
         fetch("assets/data/recipe_options.json")
@@ -37,6 +47,10 @@ function getIsFavourite(number) {
     }
 }
 
+/**
+ * Change the displayed status of a favourited recipe item
+ * @number is the item to be fetched from the JSON file
+ */
 function changeIsFavourite(number) {
     if ( document.getElementById("star"+number).className.match(/(?:^|\s)favourite(?!\S)/) ){
         try {
