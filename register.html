@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>FRIDGE 2 PLATE REGISTRATION</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/login.css" />
+        <link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap"
+		rel="stylesheet"
+	    />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+
+    <div class="container">
+        <div class="card">
+            <img class="card-image" src="assets/images/logo.png"></img>
+            <h1 style="text-align: center;">REGISTER</h1>
+            <form class="card-form" id="registerForm">
+                <div class="input">
+                    <input type="text" id="username" class="input-field" placeholder="Email"required/>
+                </div>
+                    <div class="input">
+                    <input type="password" id="password" class="input-field" placeholder="Password"required/>
+                </div>
+                <div class="action">
+                    <button type="submit" class="action-button">Login</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#registerForm").submit(function(event) {
+                event.preventDefault();
+
+                var username = $("#username").val();
+                var password = $("#password").val();
+
+                var requestBody = {
+                    username: username,
+                    password: password
+                };
+
+                $.ajax({
+                    url: "http://127.0.0.1:8000/api/auth/create",
+                    type: "POST",
+                    contentType: "application/json",
+                    data: JSON.stringify(requestBody),
+                    success: function(response, status, xhr) {
+                        if (xhr.status === 200) {
+
+                            var token = response.token;
+                            document.cookie = "token=" + encodeURIComponent(token);
+
+                            var cookies = document.cookie.split("; ");
+                            for (var i = 0; i < cookies.length; i++) {
+                                var cookie = cookies[i].split("=");
+                                if (cookie[0] === "token") {
+                                    console.log("Token: " + decodeURIComponent(cookie[1]));
+                                    break;
+                                }
+                            }
+                        }
+                        window.location.href = "index.html";
+                    },
+                        error: function(xhr, status, error) {
+                        console.error(error);
+                    }
+                });
+            });
+        });
+    </script>
+</html>

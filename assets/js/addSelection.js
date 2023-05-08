@@ -24,6 +24,69 @@ function addSelection(item){
     }
 }
 
+function getRecipes() {
+    var ingredients = document.getElementsByClassName("options-card");
+    if ((ingredients.length < 1 || ingredients.length > 10)){
+        throw new Error("wrong amount of ingredients selected")
+    }
+
+    var requestBody = {};
+    for (var i = 0; i < ingredients.length; i++) {
+        var key = "ingredient" + (i + 1);
+        requestBody[key] = ingredients[i].textContent;
+    }
+  
+    var token = getCookie("token");
+  
+    fetch("http://127.0.0.1:8000/api/recipe/recipes", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        "token": token
+        },
+        body: JSON.stringify(requestBody)
+    })
+    .then(response => {
+        if (response.ok) {
+            console.log("Request successful");
+        } else {
+            console.log("Request failed");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
+  
+function getCookie(cookieName) {
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var cookieArray = decodedCookie.split("; ");
+
+    for (var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i];
+        var cookieParts = splitByFirstEqualSign(cookie)
+
+        if (cookieParts[0] === cookieName) {
+            return cookieParts[1];
+        }
+    }
+
+    return null;
+}
+
+function splitByFirstEqualSign(inputString) {
+    var index = inputString.indexOf('=');
+  
+    if (index !== -1) {
+        var key = inputString.substring(0, index);
+        var value = inputString.substring(index + 1);
+
+        return [key, value];
+    }
+  
+    return null;
+}
+
 /**
  * Clear all the currently selected items from the list
  */
