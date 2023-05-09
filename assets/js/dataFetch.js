@@ -2,13 +2,9 @@
  * Display the category of a recipe option
  * @number is the item to be fetched from the JSON file
  */
-function getRecipeCategory(number) {
+function getRecipeCategory(number, category) {
     try {
-        fetch("assets/data/recipe_options.json")
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById("category"+number).innerHTML=data[number].category
-        })
+        document.getElementById("category"+number).innerHTML=category
     } catch(Error) {
         console.log(Error)
     }
@@ -17,8 +13,14 @@ function getRecipeCategory(number) {
  * Display the name of a recipe option
  * @number is the item to be fetched from the JSON file
  */
-function getRecipeName(number) {
+function getRecipeName(number, name) {
     try {
+        document.getElementById("name"+number).innerHTML=name
+    } catch(Error) {
+        console.log(Error)
+    }
+    /**
+    try {  
         fetch("assets/data/recipe_options.json")
         .then(response => response.json())
         .then(data => {
@@ -27,6 +29,7 @@ function getRecipeName(number) {
     } catch(Error) {
         console.log(Error)
     }
+    */
 }
 
 /**
@@ -68,7 +71,8 @@ function changeIsFavourite(number) {
 
 }
 
-function instantiateRecipeCard(number) {
+function instantiateRecipeCard(number, name, category, id) {
+
     const container = document.getElementById('container');
 
     const card = document.createElement('div');
@@ -78,10 +82,11 @@ function instantiateRecipeCard(number) {
     dataFetchScript.src = 'assets/js/dataFetch.js';
   
     const recipeCategoryScript = document.createElement('script');
-    recipeCategoryScript.textContent = `getRecipeCategory(${number})`;
-  
+    recipeCategoryScript.textContent = `getRecipeCategory(${number}, '${category}')`;
+
+
     const recipeNameScript = document.createElement('script');
-    recipeNameScript.textContent = `getRecipeName(${number})`;
+    recipeNameScript.textContent = `getRecipeName(${number}, '${name}')`;
   
     const isFavouriteScript = document.createElement('script');
     isFavouriteScript.textContent = `getIsFavourite(${number})`;
@@ -111,12 +116,10 @@ function instantiateRecipeCard(number) {
     card.appendChild(foodImage);
     card.appendChild(nameHeading);
     card.appendChild(favouriteStar);
-  
+
     container.appendChild(card);
 }
   
-
-
 function loadRecipes() {
     recipes = JSON.parse(sessionStorage.getItem('recipes'))
     keys = Object.keys(recipes);
@@ -127,12 +130,13 @@ function loadRecipes() {
         key = keys[i];
         value = recipes[key];
       
-        console.log(key + " name : " + value['name']);
-        console.log(key + " category : " + value['category']);
-        console.log(key + " image_url : " + value['image_url']);
-      }
-
-    for (let i = 0; i <= 7; i++) {
-        instantiateRecipeCard(i);
+        console.log(key + " name : " + value['recipe_name']);
+        console.log(key + " category : " + value['recipe_category']);
+        console.log(key + " id : " + value['recipe_id']);
+        instantiateRecipeCard(i,value['recipe_name'],value['recipe_category'],value['recipe_id'])
     }
+
+    //for (let i = 0; i <= 7; i++) {
+    //    instantiateRecipeCard(i,);
+    //}
 }
