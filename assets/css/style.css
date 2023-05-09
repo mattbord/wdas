@@ -166,7 +166,7 @@ nav::-webkit-scrollbar-thumb {
 
 .generate-btn {
   width: 30rem;
-  height: 10rem;
+  height: 7rem;
   font-size: 32px;
   color: white;
   background-color: #499bb6;
@@ -178,6 +178,7 @@ nav::-webkit-scrollbar-thumb {
   /* 20 rem is the width of the side bar */
   left: calc(50% - 10rem);
   margin-top: 43rem;
+  margin-bottom: 3rem;
   z-index: 1;
 }
 
@@ -188,6 +189,7 @@ nav::-webkit-scrollbar-thumb {
 .container {
   position: absolute;
   width: 30rem;
+  margin-bottom: 15rem;
   /* 20 rem is the width of the side bar */
   left: calc(50% - 10rem);
   margin-top: 3rem;
@@ -216,7 +218,7 @@ nav::-webkit-scrollbar-thumb {
   height: 5rem;
   position: absolute;
   left: calc(70%);
-  margin-top: 46rem;
+  margin-top: 43rem;
   z-index: 1;
   color: white;
   background-color: #499bb6;
