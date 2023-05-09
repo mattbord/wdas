@@ -47,11 +47,10 @@ function getRecipes() {
         body: JSON.stringify(requestBody)
     })
     .then(response => {
-        if (response.ok) {
-            console.log("Request successful");
-        } else {
-            console.log("Request failed");
-        }
+        response.json().then((data) => {
+            sessionStorage.setItem('recipes', JSON.stringify(data));
+            window.location.href = "recipes.html";
+        })
     })
     .catch(error => {
         console.error("Error:", error);
