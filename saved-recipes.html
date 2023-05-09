@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-  <title>Saved Recipes</title>
+  <title>Recipes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="assets/css/recipes.css" />
   <link
@@ -10,7 +10,7 @@
   />
 </head>
 
-<body>
+<body onload="loadSavedRecipes()">
 	<nav class="top-nav-bar">
     <img class = "logo" src="assets/images/logo.png" alt="logo">
 		<ul class="top-nav-bar-container">
@@ -23,53 +23,13 @@
 
 	
 	<main>
-	    <div class="container">
-
-            <div class="card">
-                <script src="assets/js/dataFetch.js"></script>
-                <script>
-                getRecipeCategory(1)
-                getRecipeName(1)
-                getIsFavourite(1)
-                </script>
-                <h2 id="category1"></h2>
-                <img src="assets/images/food/Steak with Vegatables.jpg" id="food1" class="food">
-                <h4 id="name1"></h4>
-                <img src="assets/images/star.svg" class="favourite-grey" id="star1" onclick=changeIsFavourite(1)>
-            </div>
-            
-            <div class="card">
-                <script src="assets/js/dataFetch.js"></script>
-                <script>
-                getRecipeCategory(4)
-                getRecipeName(4)
-                getIsFavourite(4)
-                </script>
-                <h2 id="category4"></h2>
-                <img src="assets/images/food/Butter Chicken.jpg" id="food4" class="food">
-                <h4 id="name4"></h4>
-                <img src="assets/images/star.svg" class="favourite-grey" id="star4" onclick=changeIsFavourite(4)>
-            </div>
-
-            <div class="card">
-                <script src="assets/js/dataFetch.js"></script>
-                <script>
-                getRecipeCategory(6)
-                getRecipeName(6)
-                getIsFavourite(6)
-                </script>
-                <h2 id="category6"></h2>
-                <img src="assets/images/food/Nachos.png" id="food6" class="food">
-                <h4 id="name6"></h4>
-                <img src="assets/images/star.svg" class="favourite-grey" id="star6" onclick=changeIsFavourite(6)>
-            </div>
-
-        </div>
+		<div class="container" id="container"></div>
   </main>
 
-    <div class="paginator">
-        <a>←</a>
-        Page 1
-        <a>→</a>
-    </div>
+  <div class="paginator">
+    <a>←</a>
+    Page 1
+    <a>→</a>
+  </div>
+  <script src="assets/js/dataFetch.js"></script>
 </body>

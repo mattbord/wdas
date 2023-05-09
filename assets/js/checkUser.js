@@ -5,10 +5,14 @@ function getCookieValid(cookieName) {
     for (var i = 0; i < cookieArray.length; i++) {
         var cookie = cookieArray[i];
         var cookieParts = splitByFirstEqualSign(cookie)
-
-        if (cookieParts[0] === cookieName) {
-            return true
+        try{
+            if (cookieParts[0] === cookieName) {
+                return true
+            }
+        } catch {
+            return false
         }
+
     }
     return false;
 }

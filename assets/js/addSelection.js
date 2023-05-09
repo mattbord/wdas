@@ -37,6 +37,22 @@ function getRecipes() {
     }
   
     var token = getCookie("token");
+
+    fetch("http://127.0.0.1:8000/api/recipe/favourites", {
+        method: "GET",
+        headers: {
+        "Content-Type": "application/json",
+        "token": token
+        }
+    })
+    .then(response => {
+        response.json().then((data) => {
+            sessionStorage.setItem('favourites', JSON.stringify(data));
+        })
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
   
     fetch("http://127.0.0.1:8000/api/recipe/recipes", {
         method: "POST",
