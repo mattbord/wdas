@@ -71,8 +71,7 @@ function changeIsFavourite(number) {
 
 }
 
-function instantiateRecipeCard(number, name, category, id) {
-
+function instantiateRecipeCard(number, name, category, id, image) {
     const container = document.getElementById('container');
 
     const card = document.createElement('div');
@@ -95,7 +94,7 @@ function instantiateRecipeCard(number, name, category, id) {
     categoryHeading.id = `category${number}`;
   
     const foodImage = document.createElement('img');
-    foodImage.src = `assets/images/food/${number}.jpg`;
+    foodImage.src = `data:image/jpeg;base64,${image}`;
     foodImage.id = `food${number}`;
     foodImage.className = 'food';
   
@@ -119,24 +118,34 @@ function instantiateRecipeCard(number, name, category, id) {
 
     container.appendChild(card);
 }
-  
-function loadRecipes() {
+
+async function loadRecipes() {
     recipes = JSON.parse(sessionStorage.getItem('recipes'))
     keys = Object.keys(recipes);
+    let images;
 
-    console.log(recipes)
-    console.log(keys)
+    await fetch("http://127.0.0.1:8000/api/recipe/images", {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/json",
+        },
+        body: JSON.stringify(keys.map((str) => (parseInt(str, 10) + 1).toString())),
+    })
+    .then(response => response.json())
+    .then(data => {
+        images = data;
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
     for (let i = 0; i < keys.length; i++) {
         key = keys[i];
         value = recipes[key];
       
-        console.log(key + " name : " + value['recipe_name']);
-        console.log(key + " category : " + value['recipe_category']);
-        console.log(key + " id : " + value['recipe_id']);
-        instantiateRecipeCard(i,value['recipe_name'],value['recipe_category'],value['recipe_id'])
+        //console.log(key + " name : " + value['recipe_name']);
+        //console.log(key + " category : " + value['recipe_category']);
+        //console.log(key + " id : " + value['recipe_id']);
+        instantiateRecipeCard(i,value['recipe_name'],value['recipe_category'],value['recipe_id'], images['images'][i])
     }
-
-    //for (let i = 0; i <= 7; i++) {
-    //    instantiateRecipeCard(i,);
-    //}
 }
