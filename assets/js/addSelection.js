@@ -56,7 +56,7 @@ function getRecipes() {
         console.error("Error:", error);
     });
 }
-  
+
 function getCookie(cookieName) {
     var decodedCookie = decodeURIComponent(document.cookie);
     var cookieArray = decodedCookie.split("; ");
