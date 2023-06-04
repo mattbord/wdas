@@ -37,7 +37,7 @@ function changeIsFavourite(number) {
 
       var token = getCookie("token");
 
-      fetch("http://127.0.0.1:8000/api/recipe/favourites/" + number, {
+      fetch("https://wdas-api.vercel.app/api/recipe/favourites/" + number, {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -53,7 +53,7 @@ function changeIsFavourite(number) {
     try {
       document.getElementById("star" + number).className = "favourite";
       var token = getCookie("token");
-      fetch("http://127.0.0.1:8000/api/recipe/favourites/" + number, {
+      fetch("https://wdas-api.vercel.app/api/recipe/favourites/" + number, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -156,7 +156,7 @@ async function loadRecipes() {
   keys = Object.keys(recipes);
   let images;
 
-  await fetch("http://127.0.0.1:8000/api/recipe/images", {
+  await fetch("https://wdas-api.vercel.app/api/recipe/images", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -199,7 +199,7 @@ async function loadSavedRecipes() {
   var token = getCookie("token");
 
   //get the actual recipes
-  await fetch("http://127.0.0.1:8000/api/recipe/favourites/recipes", {
+  await fetch("https://wdas-api.vercel.app/api/recipe/favourites/recipes", {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -222,7 +222,7 @@ async function loadSavedRecipes() {
     keys = Object.keys(recipes);
     recipe_ids = recipes.map((recipe) => recipe.recipe_id.toString());
 
-    await fetch("http://127.0.0.1:8000/api/recipe/images", {
+    await fetch("https://wdas-api.vercel.app/api/recipe/images", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
