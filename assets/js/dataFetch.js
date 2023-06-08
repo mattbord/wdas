@@ -165,7 +165,7 @@ async function loadRecipes() {
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(keys.map((str) => (parseInt(str, 10) + 1).toString())),
+    body: JSON.stringify(recipes.map(recipe => recipe.recipe_id)),
   })
     .then((response) => response.json())
     .then((data) => {
