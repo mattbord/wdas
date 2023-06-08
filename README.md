@@ -1,5 +1,14 @@
-# IMPORTANT!!
-## This project uses local JSON for data storage.
-## opening the index.js directly from a file system will cause the browser to block access these files because of CORS policy.
-## Instead, run the project using 'Live Server' extension on VS Code or start a python web server to ensure correct functionality.
-## Please do not hesistate to contact our group for assistance.
+# Team
+- z5354286@ad.unsw.edu.au - Matthew Bordonaro
+- z5368500@ad.unsw.edu.au - Oliver Punt
+- r.gurmukhani@student.unsw.edu.au - Rahul Gurmukhani
+
+# Local testing environment setup
+
+## 1. Clone the repository main branch
+
+## 2. Create a virtual environment with python 3.9
+
+## 3. Install live server extension for vs code
+
+## 5. Start the server
