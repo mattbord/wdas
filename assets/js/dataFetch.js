@@ -97,7 +97,7 @@ function splitByFirstEqualSign(inputString) {
   return null;
 }
 
-function instantiateRecipeCard(number, name, category, favourite, image) {
+function instantiateRecipeCard(number, name, category, favourite, image, url) {
   const container = document.getElementById("container");
 
   const card = document.createElement("div");
@@ -119,6 +119,9 @@ function instantiateRecipeCard(number, name, category, favourite, image) {
   foodImage.src = `data:image/jpeg;base64,${image}`;
   foodImage.id = `food${number}`;
   foodImage.className = "food";
+  foodImage.addEventListener("click", () => {
+    window.open(url, "_blank");
+  });
 
   const nameHeading = document.createElement("h4");
   nameHeading.id = `name${number}`;
@@ -144,6 +147,7 @@ function instantiateRecipeCard(number, name, category, favourite, image) {
 
   container.appendChild(card);
 }
+
 
 async function loadRecipes() {
   try {
@@ -181,7 +185,8 @@ async function loadRecipes() {
         value["recipe_name"],
         value["recipe_category"],
         true,
-        images["images"][i]
+        images["images"][i],
+        value["recipe_url"]
       );
     } else {
       instantiateRecipeCard(
@@ -189,7 +194,8 @@ async function loadRecipes() {
         value["recipe_name"],
         value["recipe_category"],
         false,
-        images["images"][i]
+        images["images"][i],
+        value["recipe_url"]
       );
     }
   }
@@ -245,7 +251,8 @@ async function loadSavedRecipes() {
         value["recipe_name"],
         value["recipe_category"],
         true,
-        images["images"][i]
+        images["images"][i],
+        value["recipe_url"]
       );
     }
   } catch (error) {
